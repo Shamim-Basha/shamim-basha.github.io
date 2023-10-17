@@ -472,6 +472,8 @@ footer p{
         justify-content: center;
         align-items: center;
     }
+    .logo img{
+        height:2rem;
     .one-line{
         height: 50vh;
         font-size: 10vh;
