@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="sm-logo.png" type="image/x-icon" >
+    <script defer src="app.js"></script>
+    <script src="https://kit.fontawesome.com/ea2e285d79.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <title>Shamim Basha - Developer</title>
+</head>
+<body>
+    <div class="pre">
+        <div class="pre-content">
+            <img style="height: 20rem;" src="assets/sm-logo.png" alt="">
+            <h2>Shamim Basha's Portfolio</h2>
+        </div>
+    </div>
+    <nav>
+        <div class="logo"><a href="#home"><img class="logo-img" src="assets/logo.png" alt=""></a></div>
+        <div class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="">Resume</a></li>
+            </ul>
+            <button><a href="#contact">Let's Talk</a></button>
+        </div>
+    </nav>
+    <div class="main-container">
+        <section id="home" class="hero light">
+            <div class="boxes">
+                <p class="out">Hi, my name is</p>
+                <h1 class="out">Shamim Basha.</h1>
+                <p class="out">I create elevating digital experience that inspire and connect with people through development and design.</p>
+            </div>
+        </section>
+        <div class="one-line light anim-left">"Passionate problem solver turning lines of code into innovative solutions."</div>
+        <section id="about" class="about">
+            <h2 class="anim-bottom">About Me</h2>
+            <div class="about-me flex sm dark">
+                <div class="profile-img left anim-bottom"><img src="assets/s-profile(1).png" alt=""></div>
+                <div class="about-desc right">
+                    <p class="anim-left" >Hey ! my name is Shamim, I'm a passionate student with a strong desire to make a mark in the tech world. </p>
+                    <br>
+                    <p class="anim-left">I've a solid foundation in <strong> programming languages, algorithms, and software development</strong> and constantly striving to expand my knowledge.</p>
+                    <br>
+                    <p class="anim-left"> I'm eager to apply my <strong>skills</strong> and <strong>creativity</strong> to real-world challenges and contribute to innovative solutions.</p>
+                </div>
+            </div>
+            <div class="tools flex sm light">
+                <div class="left sticky sm anim-left">
+                    <h3>My digital tool box.</h3>
+                    <p >These are my go to tech stack to make any projects happen. 
+                        I am always eager of learning more about my current stack, and new technologies that could expand my horizons.</p>
+                </div>
+                <div style="flex-basis: 50%;" class="right tools-list">
+                    
+                    <div class="">
+                        <h2 class="anim-bottom">Programming Languages :</h2>
+                        <ul>
+                            <li class="anim-left">Python</li>
+                            <li class="anim-left">JavaScript</li>
+                            <li class="anim-left">C</li>
+                            <li class="anim-left">C++</li>
+                            <li class="anim-left">SQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="sec">
+                        <h2 class="anim-bottom">Web Development :</h2>
+                        <ul>
+                            <li class="anim-left">HTML</li>
+                            <li class="anim-left">CSS</li>
+                            <li class="anim-left">JavaScript</li>
+                            <li class="anim-left">Bootstrap</li>
+                        </ul>
+                    </div>
+
+                    <div class="sec">
+                        <h2 class="anim-bottom">Web Frameworks/Libraries :</h2>
+                        <ul>
+                            <li class="anim-left">React.Js</li>
+                            <li class="anim-left">Django</li>
+                            <li class="anim-left">Flask</li>
+                        </ul>
+                    </div>
+
+                    <div class="sec">
+                        <h2 class="anim-bottom">Mobile Development :</h2>
+                        <ul>
+                            <li class="anim-left">React-Native</li>
+                            <li class="anim-left">Expo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="projects dark">
+            <h2 class="anim-bottom">Projects</h2>
+            <div style="display: flex; gap: 1em; flex-direction: column;">
+                <div class="project flex sm anim-bottom" style="align-items: flex-start;">
+                    <div class="project-image"><img src="assets/path-finder.png" alt=""></div>
+                    <div class="project-desc">
+                        <div class="project-title"><h2><a target="_blank" href="https://github.com/Shamim-Basha/path_searching_visualizer">Path Finding Visualizer</a></h2></div>
+                        <p>I developed a Python-based Path Searching Visualizer using the Pygame library, which enables users to explore and visualize pathfinding algorithms such as BFS, DFS, Greedy Best-First Search, and A* Search.</p>
+                        <div class="technologies">
+                            <div class="tech">Python</div>
+                            <div class="tech">Pygame</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project flex sm anim-bottom" style="align-items: flex-start;">
+                    <div class="project-image"><img src="assets/kanban-board.png" alt=""></div>
+                    <div class="project-desc">
+                        <div class="project-title">
+                            <h2>
+                                <a target="_blank" href="https://github.com/Shamim-Basha/kanban-board">Kanban Board - Web App</a>
+                                <a class="ex-a" href="https://shamim-basha.github.io/kanban-board/"><i class="fa-solid fa-arrow-up-right-from-square external-link" style="padding-left: .5rem;"></i></a>
+
+                            </h2>
+                        </div>
+                        <p>I created a web-based Kanban Board application, leveraging local storage to provide users with a flexible and efficient task management solution with drag and drop feature.</p>
+                        <div class="technologies">
+                            <div class="tech">HTML</div>
+                            <div class="tech">CSS</div>
+                            <div class="tech">JavaScript</div>
+                            <div class="tech">Local Storage</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project flex sm anim-bottom" style="align-items: flex-start;">
+                    <div class="project-image"><img src="assets/movie-browser-1.png" alt=""><img src="assets/movie-browser-2.png" alt=""></div>
+                    <div class="project-desc">
+                        <div class="project-title"><h2><a target="_blank" href="https://github.com/Shamim-Basha/rn-movie-browser">Movie Browser - Mobile App</a></h2></div>
+                        <p>I designed and developed a mobile app using React Native that offers a seamless movie browsing experience. This app provides users with the ability to explore a vast collection of movies, view detailed information.</p>
+                        <div class="technologies">
+                            <div class="tech">React-Native</div>
+                            <div class="tech">Expo</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project flex sm anim-bottom" style="align-items: flex-start;">
+                    <div class="project-image"><img src="assets/study-buddy.png" alt=""></div>
+                    <div class="project-desc">
+                        <div class="project-title"><h2><a target="_blank" href="https://github.com/me50/Shamim-Basha/tree/cs50/problems/2023/x/project">Study Buddy</a></h2></div>
+                        <p>Developed a web app to help students to organize all their works in the same place and secure with username and password.Where user can add todos, notes, flash-cards, pomodoro-timer and forum to help each other.</p>
+                        <div class="technologies">
+                            <div class="tech">HTML</div>
+                            <div class="tech">CSS</div>
+                            <div class="tech">Python</div>
+                            <div class="tech">Flask</div>
+                            <div class="tech">Bootstrap</div>
+                            <div class="tech">SQL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project flex sm anim-bottom" style="align-items: flex-start;">
+                    <div class="project-image"><img src="assets/tic-tac-toe.png" alt=""></div>
+                    <div class="project-desc">
+                        <div class="project-title"><h2><a target="_blank" href="https://github.com/Shamim-Basha/Tic-Tac-Toe-AI">Tic-Tac-Toe AI</a></h2></div>
+                        <p>Engineered a captivating Tic-Tac-Toe application using Python and Pygame, fusing a classic game with advanced AI powered by the Minimax algorithm. The application engages players in a strategic battle, providing an interactive Pygame interface for gameplay.</p>
+                        <div class="technologies">
+                            <div class="tech">Python</div>
+                            <div class="tech">Pygame</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project flex sm anim-bottom" style="align-items: flex-start;">
+                    <div class="project-image"><img src="assets/e-commerce.png" alt=""></div>
+                    <div class="project-desc">
+                        <div class="project-title"><h2><a target="_blank" href="https://github.com/me50/Shamim-Basha/tree/web50/projects/2020/x/commerce">E-Commerce - Web App</a></h2></div>
+                        <p>"Designed and developed an e-commerce auction site, enabling users to create listings, place bids, and manage their watchlist. Seamlessly implemented features such as category navigation and a user-friendly admin interface for easy site management."</p>
+                        <div class="technologies">
+                            <div class="tech">HTML</div>
+                            <div class="tech">Bootstrap</div>
+                            <div class="tech">Python</div>
+                            <div class="tech">Django</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project flex sm anim-bottom" style="align-items: flex-start;">
+                    <div class="project-image"><img src="assets/pomodoro-1.png" alt=""><img src="assets/pomodoro-2.png" alt=""></div>
+                    <div class="project-desc">
+                        <div class="project-title"><h2><a target="_blank" href="https://github.com/Shamim-Basha/rn-pomodoro-">Pomodoro Timer - Mobile App</a></h2></div>
+                        <p>Developed revolutionizing time management and productivity mobile app. This enables users to harness the Pomodoro Technique for heightened focus and task management, contributing to improved efficiency and goal attainment.</p>
+                        <div class="technologies">
+                            <div class="tech">React-Native</div>
+                            <div class="tech">Expo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact light">
+            <h2 class="anim-bottom">Contact</h2>
+            <div class="flex sm">
+                <div class="left" style="flex-basis: 90%;">
+                    <h3 class="anim-bottom">Have an awesome idea?<br> Let's bring it to life.</h3>
+                    <p class="anim-left" style="opacity: .6;">I am looking for freelance opportunities or <br> internships in startups, agencies and companies.</p>
+                    <form action="" class="anim-left">
+                        <div class="flex xsm" style="justify-content: space-between;">
+                            <div class="flex" style="flex-direction: column; flex-grow: 1;">
+                                <label for="username">Your name</label>
+                                <input required id="username" value="" type="text">
+                            </div>
+                            <div class="flex" style="flex-direction: column;flex-grow: 1;">
+                                <label for="email">Your email</label>
+                                <input required id="email" type="email">
+                            </div>
+                        </div>
+                        <div class="flex" style="flex-direction: column;">
+                            <label for="message">Your message</label>
+                            <textarea required id="message" name="" id="" rows="1"></textarea>
+                        </div>
+                        <input class="submit" type="submit" value="Send Message">
+                    </form>
+                </div>
+                <div class="right footer xsm" >
+                    <div class="no">
+                        <h2>Contact Details</h2>
+                        <a href="mailto:shamimbasha13@gmail.com" style="display: flex;">
+                            <p>
+                                <i class="fa-regular fa-envelope"></i>
+                            </p>
+                            <p>shamimbasha13@gmail.com</p>
+                        </a>
+                        <p><i class="fa-solid fa-phone"></i>+94-701-666-326</p>
+                    </div>
+                    <div class="sec no">
+                        <h2>My digital Spaces</h2>
+                        <ul class="social">
+                            <li><a target="_blank" href="https://github.com/shamim-basha"><i class="fa-brands fa-github"></i>Github</a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/shamim-basha-524a55244/"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/shamim.shazu?igshid=MzRIODBiNWFIZA=="><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                            <li><a target="_blank" href="https://youtube.com/@shamim_basha"><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <footer>
+        <p>@Shamim Basha 2023. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>
