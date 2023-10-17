@@ -254,7 +254,6 @@ section>h2::after{
 .about-desc p{
     font-size: 1.5rem;
     padding: 20px 0 ;
-    opacity: 1;
 }
 .about-me{
     display: flex;
@@ -473,7 +472,7 @@ footer p{
         align-items: center;
     }
     .logo img{
-        height:2rem;
+        height: 2rem;
     }
     .one-line{
         height: 50vh;
