@@ -427,6 +427,9 @@ footer p{
     .sec ul{
         font-size: 1.3rem;
     }
+    .tools li{
+    font-size: 2rem;
+    }
 }
 @media (max-width:1200px){
     html{
