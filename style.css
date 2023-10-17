@@ -475,6 +475,9 @@ footer p{
         justify-content: center;
         align-items: center;
     }
+    .tools{
+        align-items:unset;
+    }
     .logo img{
         height: 2rem;
     }
