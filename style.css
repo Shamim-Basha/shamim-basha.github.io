@@ -21,7 +21,6 @@ body{
     background-color: var(--secondary-color);
     color: var(--primary-color);
     width:100vw;
-    overflow-X:hidden;
     font-family: Arial, sans-serif;
     font-size: 2rem;
     transition: background-color 350ms ease-out;
@@ -208,7 +207,6 @@ nav{
 .main-container{
     max-width: 1200px;
     margin: 0 auto;
-    overflow-x:hidden;
 }
 section{
     min-height: 100vh;
@@ -488,7 +486,6 @@ footer p{
     }
     body{
         font-size: 1rem;
-        overflow-x: hidden;
     }
     .boxes{
         height: 50vh;
@@ -543,7 +540,6 @@ footer p{
         top: 2.5em;
     }
     .main-container{
-        overflow-x: hidden;
         margin: 0 2rem;
     }
     .left{
