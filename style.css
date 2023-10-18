@@ -25,7 +25,6 @@ body{
     font-family: Arial, sans-serif;
     font-size: 2rem;
     transition: background-color 350ms ease-out;
-    overflow-Y:hidden;
     animation: ov 4s forwards ease;
 }
 .logo-img{
