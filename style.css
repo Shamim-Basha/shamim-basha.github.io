@@ -63,7 +63,7 @@ svg g{
 
 @keyframes ov{
     100%{
-        overflow: scroll;
+        overflow-Y: scroll;
     }
 }
 @keyframes pre {
