@@ -108,6 +108,7 @@ li{
     height: 100vh;
     width: 100vw;
     color: #faf9f9;
+    display:none;
     position: absolute;
     font-size: 6vh;
     z-index: 999;
