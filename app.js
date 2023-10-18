@@ -38,7 +38,7 @@ hamli.forEach(ham =>{
         hamitem.style.transform = "translateX(100vw)"
         mainCont.style.height = "unset"
         mainCont.style.overflowY = "unset"
-        footer.style.display = "block"
+        footer.style.display = "flex"
     })
 })
 hamitem.style.transform = "translateX(100vw)"
@@ -47,7 +47,7 @@ close.addEventListener("click",()=>{
     hamitem.style.transform = "translateX(100vw)"
     mainCont.style.height = "unset"
     mainCont.style.overflowY = "unset"
-    footer.style.display = "block"
+    footer.style.display = "flex"
 })
 
 hamopen.addEventListener("click",()=>{
