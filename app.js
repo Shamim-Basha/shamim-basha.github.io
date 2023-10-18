@@ -23,8 +23,39 @@ onmousemove = (e)=>{
     }
 }
 //
-window.scrollTo(0,0)
+// window.scrollTo(0,0)
+window.scrollTo(document.querySelector("#home"))
 //
+const hamopen = document.querySelector(".ham-menu")
+const hamitem = document.querySelector(".ham-items")
+const close = document.querySelector(".close")
+const mainCont = document.querySelector(".main-container")
+const footer = document.querySelector("footer")
+const hamli = document.querySelectorAll(".ham-li")
+
+hamli.forEach(ham =>{
+    ham.addEventListener("click",()=>{
+        hamitem.style.transform = "translateX(100vw)"
+        mainCont.style.height = "unset"
+        mainCont.style.overflowY = "unset"
+        footer.style.display = "block"
+    })
+})
+hamitem.style.transform = "translateX(100vw)"
+
+close.addEventListener("click",()=>{
+    hamitem.style.transform = "translateX(100vw)"
+    mainCont.style.height = "unset"
+    mainCont.style.overflowY = "unset"
+    footer.style.display = "block"
+})
+
+hamopen.addEventListener("click",()=>{
+    mainCont.style.height = "100vh"
+    mainCont.style.overflowY = "hidden"
+    footer.style.display = "none"
+    hamitem.style.transform = "translateX(0)"
+})
 
 //contact form
 formel = document.querySelector("form")
