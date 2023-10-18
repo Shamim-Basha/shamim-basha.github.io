@@ -35,10 +35,11 @@ const hamli = document.querySelectorAll(".ham-li")
 
 hamli.forEach(ham =>{
     ham.addEventListener("click",()=>{
-        hamitem.style.transform = "translateX(100vw)"
+        hamitem.style.display = "none"
         mainCont.style.height = "unset"
         mainCont.style.overflowY = "unset"
         footer.style.display = "flex"
+        hamitem.style.transform = "translateX(100vw)"
     })
 })
 hamitem.style.transform = "translateX(100vw)"
@@ -48,12 +49,14 @@ close.addEventListener("click",()=>{
     mainCont.style.height = "unset"
     mainCont.style.overflowY = "unset"
     footer.style.display = "flex"
+    hamitem.style.display = "none"
 })
 
 hamopen.addEventListener("click",()=>{
     mainCont.style.height = "100vh"
     mainCont.style.overflowY = "hidden"
     footer.style.display = "none"
+    hamitem.style.display = "unset"
     hamitem.style.transform = "translateX(0)"
 })
 

@@ -144,6 +144,7 @@ nav{
     padding: 22px 5vw;
     font-size: 1.3rem;
     position: fixed;
+    width: 100vw;
     top: 0;
     bottom: auto;
     left: 0;
@@ -207,6 +208,7 @@ nav{
 .main-container{
     max-width: 1200px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 section{
     min-height: 100vh;
@@ -541,6 +543,7 @@ footer p{
         top: 2.5em;
     }
     .main-container{
+        overflow-x: hidden;
         margin: 0 2rem;
     }
     .left{
