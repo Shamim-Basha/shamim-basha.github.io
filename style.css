@@ -20,6 +20,8 @@ html{
 body{
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    width:100vw;
+    overflow-X:hidden;
     font-family: Arial, sans-serif;
     font-size: 2rem;
     transition: background-color 350ms ease-out;
