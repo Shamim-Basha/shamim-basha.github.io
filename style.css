@@ -207,6 +207,7 @@ nav{
 .main-container{
     max-width: 1200px;
     margin: 0 auto;
+    overflow-X:hidden;
 }
 section{
     min-height: 100vh;
