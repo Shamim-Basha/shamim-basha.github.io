@@ -524,8 +524,15 @@ footer p{
         justify-content: center;
         align-items: center;
     }
-    .tools{
-        align-items:unset;
+    .tools-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tools ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .logo-img{
         height: 1.6rem;
