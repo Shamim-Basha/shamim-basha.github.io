@@ -42,6 +42,13 @@ open.addEventListener('click',()=>{
     close.classList.remove('none')
     close.style.display = 'block'
     open.classList.add('none')
+    nav.addEventListener('click',()=>{
+        nav.classList.add('hide')
+        show = false
+        open.classList.remove('none')
+        close.style.display = 'none'
+        close.classList.add('none')
+    })
 })
 
 close.addEventListener("click",()=>{
@@ -51,7 +58,6 @@ close.addEventListener("click",()=>{
     close.style.display = 'none'
     close.classList.add('none')
 })
-
 
 //contact form
 formel = document.querySelector("form")
