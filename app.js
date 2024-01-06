@@ -2,9 +2,13 @@ navEl = document.querySelector("nav")
 
 // closing and opening of nav bar with scrolling
 prevpos = 0
+show = false
 window.onscroll = (()=> {
     curpos = window.scrollY
-    if (curpos > "300"){
+    if(show){
+        window.scrollTo(0,curpos)
+    }
+    if (curpos > "300" && !show){
         if (curpos < prevpos){
             navEl.style.top = "0"
         }else{
@@ -24,41 +28,30 @@ onmousemove = (e)=>{
 }
 //
 // window.scrollTo(0,0)
-window.scrollTo(document.querySelector("#home"))
+// window.scrollTo(document.querySelector("#home"))
 //
-const hamopen = document.querySelector(".ham-menu")
-const hamitem = document.querySelector(".ham-items")
 const close = document.querySelector(".close")
 const mainCont = document.querySelector(".main-container")
 const footer = document.querySelector("footer")
-const hamli = document.querySelectorAll(".ham-li")
+const open = document.querySelector('.ham-menu')
+const nav = document.querySelector('.nav')
 
-hamli.forEach(ham =>{
-    ham.addEventListener("click",()=>{
-        hamitem.style.display = "none"
-        mainCont.style.height = "unset"
-        mainCont.style.overflowY = "unset"
-        footer.style.display = "flex"
-        hamitem.style.transform = "translateX(100vw)"
-    })
+open.addEventListener('click',()=>{
+    nav.classList.remove('hide')
+    show = true
+    close.classList.remove('none')
+    close.style.display = 'block'
+    open.classList.add('none')
 })
-hamitem.style.transform = "translateX(100vw)"
 
 close.addEventListener("click",()=>{
-    hamitem.style.transform = "translateX(100vw)"
-    mainCont.style.height = "unset"
-    mainCont.style.overflowY = "unset"
-    footer.style.display = "flex"
-    hamitem.style.display = "none"
+    nav.classList.add('hide')
+    show = false
+    open.classList.remove('none')
+    close.style.display = 'none'
+    close.classList.add('none')
 })
 
-hamopen.addEventListener("click",()=>{
-    mainCont.style.height = "100vh"
-    mainCont.style.overflowY = "hidden"
-    footer.style.display = "none"
-    hamitem.style.display = "unset"
-    hamitem.style.transform = "translateX(0)"
-})
 
 //contact form
 formel = document.querySelector("form")

@@ -103,39 +103,9 @@ a{
 li{
     list-style: none;
 }
-.ham-items{
-    background-color: #0d0d0d;
-    height: 100vh;
-    width: 100vw;
-    color: #faf9f9;
-    display:none;
-    position: absolute;
-    font-size: 6vh;
-    z-index: 999;
-    transition:  transform 300ms ease;
-}
-.ham-list ul{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 5vh;
-    letter-spacing: 1vh;
-}
+.ham-menu,
 .close{
-    color: #faf9f9;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-}
-
-.ham-list ul li a{
-    color: #faf9f9;
-}
-.ham-list ul li{
-    margin: 2.5vh 0;
+    display: none;
 }
 nav{
     z-index: 100;
@@ -443,16 +413,6 @@ label{
 .sec ul li{
     padding: .7em 0;
 }
-.ham{
-    color: var(--primary-color);
-}
-.ham:hover{
-    opacity: .7;
-}
-i{
-    color: var(--primary-color);
-    padding-right: .5em;
-}
 footer{
     background-color:#0d0d0d;
     color: #faf9f9;
@@ -477,9 +437,6 @@ footer p{
     .tools li{
     font-size: 2rem;
     }
-    .ham-menu{
-        display: none;
-    }
 }
 @media (max-width:1200px){
     html{
@@ -487,6 +444,12 @@ footer p{
     }
     body{
         font-size: 1rem;
+    }
+    .ham-menu{
+        display: block;
+    }
+    .none{
+        display: none;
     }
     .boxes{
         height: 50vh;
@@ -553,11 +516,33 @@ footer p{
     .left{
         position: relative;
     }
-    .nav{
-        display: none;
+    .hide{
+        opacity: 0;
+        transform: translateX(120vw);
     }
-    i{
-        color: var(--secondary-color);
+    .nav{
+        padding: 4rem 2rem 0 0;
+        width: 110vw;
+        height: 110vh;
+       position: absolute;
+       display: flex;
+       flex-direction: column;
+       top: 100%;
+       left: -10%;
+       font-size: 3rem;
+       background-color: var(--secondary-color);
+       transition: 350ms ease-out;
+    }
+    .nav ul{
+        margin-left: 3rem;
+        color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav ul li a{
+        padding: 1rem 0;
+        color: var(--primary-color);
     }
     /* .profile img{
         position: relative;
