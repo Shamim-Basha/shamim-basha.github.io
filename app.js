@@ -134,6 +134,137 @@ document.addEventListener("scroll",()=>{
     })
 })
 
+//dynamically loading projects
+
+// {
+//     "Title": "",
+//     "images": [],
+//     "link": "",
+//     "desc" : "",
+//     "technologies": [],
+// }
+
+const projectsContainer = document.querySelector(".projectsContainer")
+const projectsDiv = document.querySelector(".projects")
+const projectsObj = [
+    {"Title": "WeChat - Web App",
+    "images": ["assets/wechat.png"],
+    "link": "https://github.com/Shamim-Basha/WeChat", 
+    "source":"",
+    "desc" : "Developed a real-time webchat application using Django WebSocket technology to enhance user interactions and communication. This webchat app offers seamless, instant messaging capabilities, making it easy for users to engage in real-time conversations.",
+    "technologies": ["HTML","Django","WebSocket"]},
+
+    {"Title": "Path Finding Visualizer",
+    "images": ["assets/path-finder.png"],
+    "link": "https://github.com/Shamim-Basha/path_searching_visualizer", 
+    "source":"",
+    "desc" : "I developed a Python-based Path Searching Visualizer using the Pygame library, which enables users to explore and visualize pathfinding algorithms such as BFS, DFS, Greedy Best-First Search, and A* Search.",
+    "technologies": ["Python","Pygame"]},
+
+    {"Title": "Kanban Board - Web App",
+    "images": ["assets/kanban-board.png"],
+    "link": "https://github.com/Shamim-Basha/kanban-board", 
+    "source":"https://shamim-basha.github.io/kanban-board/",
+    "desc" : "I created a web-based Kanban Board application, leveraging local storage to provide users with a flexible and efficient task management solution with drag and drop feature.",
+    "technologies": ["HTML","CSS","JavaScript","Local Storage"]},
+
+    {"Title": "Movie Browser - Mobile App",
+    "images": ["assets/movie-browser-1.png","assets/movie-browser-2.png"],
+    "link": "https://github.com/Shamim-Basha/rn-movie-browser", 
+    "source":"",
+    "desc" : "I designed and developed a mobile app using React Native that offers a seamless movie browsing experience. This app provides users with the ability to explore a vast collection of movies, view detailed information.",
+    "technologies": ["React-Native","Expo.io"]},
+
+    {"Title": "Study Buddy",
+    "images": ["assets/study-buddy.png"],
+    "link": "https://github.com/me50/Shamim-Basha/tree/cs50/problems/2023/x/project", 
+    "source":"",
+    "desc" : "Developed a web app to help students to organize all their works in the same place and secure with username and password.Where user can add todos, notes, flash-cards, pomodoro-timer and forum to help each other.",
+    "technologies": ["HTML","Flask","Bootstrap","Sqlite"]},
+
+    {"Title": "Tic-Tac-Toe AI",
+    "images": ["assets/tic-tac-toe.png"],
+    "link": "https://github.com/Shamim-Basha/Tic-Tac-Toe-AI", 
+    "source":"",
+    "desc" : "Engineered a captivating Tic-Tac-Toe application using Python and Pygame, fusing a classic game with advanced AI powered by the Minimax algorithm. The application engages players in a strategic battle, providing an interactive Pygame interface for gameplay.",
+    "technologies": ["Python","Pygame"]},
+
+    {"Title": "E-commerce Web App",
+    "images": ["assets/e-commerce.png"],
+    "link": "https://github.com/me50/Shamim-Basha/tree/web50/projects/2020/x/commerce", 
+    "source":"",
+    "desc" : "Designed and developed an e-commerce auction site, enabling users to create listings, place bids, and manage their watchlist. Seamlessly implemented features such as category navigation and a user-friendly admin interface for easy site management.",
+    "technologies": ["HTML","Django","Bootstrap","Sqlite"]},
+
+    {"Title": "Pomodoro Timer - Mobile App",
+    "images": ["assets/pomodoro-1.png","assets/pomodoro-2.png"],
+    "link": "https://github.com/Shamim-Basha/rn-pomodoro-", 
+    "source":"",
+    "desc" : "Developed revolutionizing time management and productivity mobile app. This enables users to harness the Pomodoro Technique for heightened focus and task management, contributing to improved efficiency and goal attainment.",
+    "technologies": ["React-Native","Expo.io"]},
+]
+
+projectsObj.forEach((project,idx)=>{
+    createProjectDiv(project,idx)
+})
+const more_btn = document.createElement("button")
+more_btn.classList = "more-btn"
+more_btn.id = "1"
+more_btn.innerHTML = `Show more <i class="fa-solid fa-chevron-down"></i>`
+more_btn.onclick = ()=>{
+    if (more_btn.id == 1){
+        more_btn.id = 0
+        more_btn.innerHTML = `Show less <i class="fa-solid fa-chevron-up"></i>`
+        document.querySelectorAll(".p-hide").forEach(p=>{
+            p.style.display = "flex"
+        })
+
+    }else{
+        more_btn.id = 1
+        more_btn.innerHTML = `Show more <i class="fa-solid fa-chevron-down"></i>`
+        document.querySelectorAll(".p-hide").forEach(p=>{
+            p.style.display = "none"
+        })
+    }
+}
+projectsDiv.appendChild(more_btn)
+
+function createProjectDiv(project,idx){
+    const Pdiv = document.createElement("div")
+    Pdiv.className = "project flex sm anim-bottom"
+    if(idx>4){
+        Pdiv.classList.add("p-hide")
+        Pdiv.style.display = "none"
+}
+    Pdiv.style.alignItems = "flex-start"
+
+    const ImgDiv = document.createElement("div")
+    ImgDiv.classList = "project-image"
+    project.images.forEach(image=>{
+        const img = document.createElement("img")
+        img.src = image
+        ImgDiv.appendChild(img)
+    })
+    Pdiv.appendChild(ImgDiv)
+
+    const descDiv = document.createElement("div")
+    descDiv.classList = "project-desc"
+    descDiv.innerHTML = `<div class="project-title"><h2><a target="_blank" href=${project.link}>${project.Title}</a> 
+    ${project.source? `<a class="ex-a" href={project.source}><i class="fa-solid fa-arrow-up-right-from-square external-link" style="padding-left: .5rem;"></i></a>` : ""}
+    </h2></div>
+    <p>${[project.desc]}</p>`
+    const techDiv = document.createElement("div")
+    techDiv.classList = "technologies"
+    project.technologies.forEach(tech=>{
+        const tDiv = document.createElement("div")
+        tDiv.classList = "tech"
+        tDiv.innerText = tech
+        techDiv.appendChild(tDiv)
+    })
+    descDiv.appendChild(techDiv)
+    Pdiv.appendChild(descDiv)
+    projectsContainer.appendChild(Pdiv)
+}
 
 //
 const noel = document.querySelectorAll(".no")
@@ -142,7 +273,7 @@ noel.forEach(el=>{
     console.log(el.classList);
     if (width > 1200){
         el.classList.add("anim-bottom")
-        console.log(noel.classList);
+        // console.log(noel.classList);
     }else{
         if(el.classList.contains("anim-bottom")){
             el.classList.remove("anim-bottom")
