@@ -175,6 +175,9 @@ nav{
 .social li a{
     opacity: .7;
 }
+.footer i{
+    margin-right:.5rem ;
+}
 .main-container{
     max-width: 1200px;
     margin: 0 auto;
