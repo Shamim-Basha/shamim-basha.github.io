@@ -225,6 +225,7 @@ more_btn.onclick = ()=>{
         document.querySelectorAll(".p-hide").forEach(p=>{
             p.style.display = "none"
         })
+        scrollIntoView(more_btn)
     }
 }
 projectsDiv.appendChild(more_btn)
