@@ -323,7 +323,7 @@ section>h2::after{
     min-height: 200px;
     width: 100%;
 }
-.project-desc p, .award-desc p{
+.project-desc p, .award-desc p, .education p{
     font-size: 1.2rem;
     line-height: 1.5rem;
 }
@@ -576,7 +576,7 @@ footer p{
     .tools-list{
         padding-top: 0;
     }
-    .project-desc p, .award-desc p{
+    .project-desc p, .award-desc p, .education p{
         font-size: 1rem;
     }
     .technologies{
