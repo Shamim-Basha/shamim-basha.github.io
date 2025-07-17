@@ -21,6 +21,7 @@ body{
     background-color: var(--secondary-color);
     color: var(--primary-color);
     width:100vw;
+    overflow: hidden;
     font-family: Arial, sans-serif;
     font-size: 2rem;
     transition: background-color 350ms ease-out;
@@ -288,7 +289,7 @@ section>h2::after{
 .tools-list{
     padding-top: 25.5vh;
 }
-.projects{
+.projects, .awards{
     margin-top: 7rem ;
 }
 .project{
@@ -296,7 +297,7 @@ section>h2::after{
     margin-bottom: 8rem;
 }
 
-.project h2:hover a{
+.project h2:hover a, .award h2:hover a{
     border-bottom: .2rem solid var(--primary-color);
 }
 .external-link{
@@ -315,14 +316,14 @@ section>h2::after{
 .project-image img{
     height: 200px;
 }
-.project-desc{
+.project-desc, .award-desc{
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 200px;
     width: 100%;
 }
-.project-desc p{
+.project-desc p, .award-desc p{
     font-size: 1.2rem;
     line-height: 1.5rem;
 }
@@ -484,7 +485,7 @@ footer p{
     }
     section{
         min-height: 60vh;
-        padding-top:3rem ;
+        padding-top:2rem ;
     }
     section>h2{
         font-size: 3rem;
@@ -575,7 +576,7 @@ footer p{
     .tools-list{
         padding-top: 0;
     }
-    .project-desc p{
+    .project-desc p, .award-desc p{
         font-size: 1rem;
     }
     .technologies{
